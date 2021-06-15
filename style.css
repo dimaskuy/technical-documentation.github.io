@@ -1,0 +1,99 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:200,400,700&display=swap";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  color: #0A1931;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+}
+p { font-size: 16px; text-align: justify; }
+
+main header, nav header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav header { padding: 15px; }
+header > span { color: #867AE9; }
+
+nav {
+  border-right: 3px solid #0A1931;
+  width: 1000px;
+}
+
+nav a {
+  display: block;
+  padding: 15px;
+  border-top: 1px solid #0A1931;
+  transition: 0.15s;
+  color: #0A1931;
+  text-decoration: none;
+}
+
+nav a:hover { background: rgba(0,0,0,.05); }
+
+main {
+  margin-left: 20px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 15px 15px 0 0;
+}
+main header {
+  font-size: 1.8rem;
+}
+main p  {
+  padding: 0;
+  margin: 0;
+}
+
+pre {
+  background: rgba(10, 25, 49,.9);
+}
+pre code {
+  color: white;
+  font-size: 18px;
+}
+
+.animate1 {
+  width: 60px; height: 60px;
+  animation: animasi1 alternate infinite 2s;
+  background: #185ADB;
+}
+@keyframes animasi1 {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: rotate(180deg);
+    background: #F54748;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container { flex-direction: column; overflow-x: hidden; }
+
+  nav {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #0A1931;
+  }
+  nav a { padding: 12px; }
+
+  main {
+    overflow-y: unset;
+  }
+
+  pre { overflow: scroll; padding-right: 10px; }
+}
